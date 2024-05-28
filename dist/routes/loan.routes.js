@@ -1,0 +1,11 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+const express_1 = require("express");
+const loan_controller_1 = require("../controllers/loan.controller");
+const router = (0, express_1.Router)();
+router.get('/', loan_controller_1.getLoans);
+router.get('/:id', loan_controller_1.getLoan);
+router.post('/', loan_controller_1.postLoan);
+router.put('/:id', loan_controller_1.updateLoan);
+router.delete('/:id', loan_controller_1.deleteLoan);
+exports.default = router;
